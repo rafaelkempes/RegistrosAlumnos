@@ -22,10 +22,10 @@ class MainActivity : ActivityWithMenus() {
 
 
             val nombre = binding.Tnombre.text.toString()
-            val apellido = binding.Tapellido.text.toString()
+            val Apellidos = binding.Tapellido.text.toString()
             val curso = binding.Tcurso.text.toString()
 
-            val nuevoAlumno = Alumno(nombre = nombre, curso = curso)
+            val nuevoAlumno = Alumno(nombre = nombre, apellido = Apellidos ,curso = curso)
             alumnoDao.insert(nuevoAlumno)
         }
     }

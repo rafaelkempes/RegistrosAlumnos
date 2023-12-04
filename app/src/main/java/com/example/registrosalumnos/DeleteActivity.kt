@@ -17,12 +17,12 @@ class DeleteActivity : ActivityWithMenus() {
         binding.Delete.setOnClickListener {
             val alumnoDao = instanciar.getDatabase().alumnoDao()
 
-            // Asumiendo que tienes EditTexts para nombre, apellido y curso
             val nombre = binding.TDeleteNombre.text.toString()
+            val apellidos=""
             val curso = binding.TDeletecurso.text.toString()
 
-            val nuevoAlumno = Alumno(nombre = nombre,curso = curso)
-            alumnoDao.insert(nuevoAlumno)
+            val borrarAlumno = Alumno(nombre = nombre, apellido = apellidos,curso = curso)
+            alumnoDao.delete(borrarAlumno)
         }
     }
 }
